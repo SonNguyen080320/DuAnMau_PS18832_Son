@@ -203,5 +203,24 @@ namespace DAL_QLBH
             finally { _conn.Close(); }
             return false;
         }
+
+        public bool KiemTraMatKhau(String email)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "sp_KiemTraMk";
+                cmd.Parameters.AddWithValue("email", email);
+                cmd.Connection = _conn;
+                if(cmd.ExecuteNonQuery()>0)
+                {
+                    return true;
+                }    
+            }
+            finally { _conn.Close(); }
+            return false;
+        }
     }
 }

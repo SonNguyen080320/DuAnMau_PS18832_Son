@@ -20,6 +20,7 @@ namespace GUI_QLBH
         public static int vaitro = 0;//kiểm tra vai trò
         public static int profile = 0;// kiểm tra đổi mật khảu thành công hay thất bại
         public static string mail;//truyền email 
+        public static string MatKhau;
         public Form dn = new Form();
         private void frmMain_Load(object sender, EventArgs e)
         {
@@ -127,10 +128,10 @@ namespace GUI_QLBH
 
         private void hồSơNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form frm = new frmDoiMatKhau();
+            
             if (!CheckExistForm("frmDoiMatKhau"))
             {
-
+                frmDoiMatKhau frm = new frmDoiMatKhau(mail);
                 frm.MdiParent = this;
                 frm.FormClosed += new FormClosedEventHandler(frmDoiMatKhau_FormClosed);
                 frm.Show();
@@ -194,6 +195,19 @@ namespace GUI_QLBH
             else
             {
                 ActiveChildForm("frmThongKeSP");
+            }
+        }
+
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn muốn đăng xuất tài khoản ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                label2.Text = "Email";
+                hồSơNhânViênToolStripMenuItem.Visible = false;
+                đăngXuấtToolStripMenuItem.Visible = false;
+                thốngKêToolStripMenuItem.Visible = false;
+                danhMụcToolStripMenuItem.Visible = false;
+                đăngNhậpToolStripMenuItem.Enabled = true;
             }
         }
     }

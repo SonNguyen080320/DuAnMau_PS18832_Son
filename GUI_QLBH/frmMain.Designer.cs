@@ -107,6 +107,7 @@ namespace GUI_QLBH
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
             this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng Xuất";
+            this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
             // hồSơNhânViênToolStripMenuItem
             // 
@@ -139,7 +140,7 @@ namespace GUI_QLBH
             // 
             this.sảnPhẩmToolStripMenuItem.Image = global::GUI_QLBH.Properties.Resources.product;
             this.sảnPhẩmToolStripMenuItem.Name = "sảnPhẩmToolStripMenuItem";
-            this.sảnPhẩmToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.sảnPhẩmToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
             this.sảnPhẩmToolStripMenuItem.Text = "Sản Phẩm";
             this.sảnPhẩmToolStripMenuItem.Click += new System.EventHandler(this.sảnPhẩmToolStripMenuItem_Click);
             // 
@@ -147,7 +148,7 @@ namespace GUI_QLBH
             // 
             this.nhânViênToolStripMenuItem.Image = global::GUI_QLBH.Properties.Resources.staff;
             this.nhânViênToolStripMenuItem.Name = "nhânViênToolStripMenuItem";
-            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
             this.nhânViênToolStripMenuItem.Text = "Nhân Viên";
             this.nhânViênToolStripMenuItem.Click += new System.EventHandler(this.nhânViênToolStripMenuItem_Click);
             // 
@@ -155,7 +156,7 @@ namespace GUI_QLBH
             // 
             this.kháchHàngToolStripMenuItem.Image = global::GUI_QLBH.Properties.Resources.customer;
             this.kháchHàngToolStripMenuItem.Name = "kháchHàngToolStripMenuItem";
-            this.kháchHàngToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.kháchHàngToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
             this.kháchHàngToolStripMenuItem.Text = "Khách Hàng";
             this.kháchHàngToolStripMenuItem.Click += new System.EventHandler(this.kháchHàngToolStripMenuItem_Click);
             // 

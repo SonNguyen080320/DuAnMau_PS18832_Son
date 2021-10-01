@@ -104,5 +104,9 @@ namespace BUS_QLBH
         {
             return dalNhanVien.SuaNhanVien(nv);
         }
+        public bool KiemTraMatKhau(string email)
+        {
+            return dalNhanVien.KiemTraMatKhau(email);
+        }    
     }
 }

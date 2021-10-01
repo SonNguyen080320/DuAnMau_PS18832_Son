@@ -18,11 +18,17 @@ namespace GUI_QLBH
         {
             InitializeComponent();
         }
+        private string email;
+        public frmDoiMatKhau(string _email) : this()
+        {
+            email = _email;
+            
+        }
         BUS_NhanVien busNhanVien = new BUS_NhanVien();
         private void frmDoiMatKhau_Load(object sender, EventArgs e)
         {
             txtEmail.Enabled = false;
-            txtEmail.Text = frmMain.mail;
+            txtEmail.Text = email;
         }
 
         private void btnDoiMK_Click(object sender, EventArgs e)
