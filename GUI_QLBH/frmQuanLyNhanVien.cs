@@ -18,6 +18,8 @@ namespace GUI_QLBH
         {
             InitializeComponent();
         }
+
+
         BUS_NhanVien busNhanVien = new BUS_NhanVien();
         private void frmQuanLyNhanVien_Load(object sender, EventArgs e)
         {
