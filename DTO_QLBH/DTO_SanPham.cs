@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO_QLBH
 {
-    class DTO_SanPham
+    public class DTO_SanPham
     {
         private string TenHang;
         private int SoLuong;
@@ -15,6 +15,7 @@ namespace DTO_QLBH
         private string HinhAnh;
         private string GhiChu;
         private string EmailNV;
+        private int MaHang;
 
         public DTO_SanPham(string tenHang, int soLuong, float donGiaNhap, float donGiaBan, string hinhAnh, string ghiChu, string emailNV)
         {
@@ -25,6 +26,17 @@ namespace DTO_QLBH
             this.HinhAnh = hinhAnh;
             this.GhiChu = ghiChu;
             this.EmailNV = emailNV;
+        }
+        public DTO_SanPham(int maHang,string tenHang, int soLuong, float donGiaNhap, float donGiaBan, string hinhAnh, string ghiChu)
+        {
+            this.MaHang = maHang;
+            this.TenHang = tenHang;
+            this.SoLuong = soLuong;
+            this.DonGiaNhap = donGiaNhap;
+            this.DonGiaBan = donGiaBan;
+            this.HinhAnh = hinhAnh;
+            this.GhiChu = ghiChu;
+            
         }
         public DTO_SanPham()
         {
@@ -65,6 +77,11 @@ namespace DTO_QLBH
         {
             get { return EmailNV; }
             set { EmailNV = value; }
+        }
+        public int maHang
+        {
+            get { return MaHang; }
+            set { MaHang = value; }
         }
     }
 }

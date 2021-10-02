@@ -281,7 +281,7 @@ namespace GUI_QLBH
         private void dtgvNV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
-            if (e.RowIndex>-1 && dtgvNV.Rows[e.RowIndex].Cells[0].Value.ToString() !="")
+            if (e.RowIndex>-1 && dtgvNV.Rows[e.RowIndex].Cells[1].Value.ToString() !="")
             {
                 DataGridViewRow row = this.dtgvNV.Rows[e.RowIndex];
                 txtDiaChi.Enabled = true;

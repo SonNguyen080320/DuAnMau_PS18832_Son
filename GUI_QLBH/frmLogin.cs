@@ -75,37 +75,44 @@ namespace GUI_QLBH
 
         private void btndangnhap_Click(object sender, EventArgs e)
         {
-            DTO_NhanVien nv = new DTO_NhanVien();
-            nv.email = txtemaildangnhap.Text;
-            nv.matKhau = busNhanVien.encrytion(txtmatkhau.Text);
-            if (busNhanVien.NhanVienDangNhap(nv))
+            if (txtemaildangnhap.Text.Trim().Length == 0 || txtmatkhau.Text.Trim().Length == 0)
             {
-                frmMain.mail = nv.email;
-                if (busNhanVien.KiemTraMatKhau(txtemaildangnhap.Text))
-                {
-                    DataTable dt = busNhanVien.VaiTroNhanVien(nv.email);
-                    if (bool.Parse(dt.Rows[0][0].ToString()) == true)
-                    {
-                        frmMain.vaitro = 1;
-                    }
-                    else { frmMain.vaitro = 0; }
-                    MessageBox.Show("Đăng Nhập Thành Công");
-                    frmMain.session = 1;
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Chào mừng bạn đến với phần mềm quản lý bán hàng. Bạn cần đổi mật khẩu trước khi sử dụng");
-                    this.Close();
-                    frmDoiMatKhau f1 = new frmDoiMatKhau(frmMain.mail);
-                    f1.Show();
-                }
-
+                MessageBox.Show("Không được bỏ trống email hoặc mật khẩu !!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Đăng nhập không thành công ! vui lòng kiểm tra lại email hoặc mật khẩu");
-                txtemaildangnhap.Focus();
+                DTO_NhanVien nv = new DTO_NhanVien();
+                nv.email = txtemaildangnhap.Text;
+                nv.matKhau = busNhanVien.encrytion(txtmatkhau.Text);
+                if (busNhanVien.NhanVienDangNhap(nv))
+                {
+                    frmMain.mail = nv.email;
+                    if (busNhanVien.KiemTraMatKhau(txtemaildangnhap.Text))
+                    {
+                        MessageBox.Show("Chào mừng bạn đến với phần mềm quản lý bán hàng. Bạn cần đổi mật khẩu trước khi sử dụng");
+                        this.Close();
+                        frmDoiMatKhau f1 = new frmDoiMatKhau(frmMain.mail);
+                        f1.Show();
+                    }
+                    else
+                    {
+                        DataTable dt = busNhanVien.VaiTroNhanVien(nv.email);
+                        if (bool.Parse(dt.Rows[0][0].ToString()) == true)
+                        {
+                            frmMain.vaitro = 1;
+                        }
+                        else { frmMain.vaitro = 0; }
+                        MessageBox.Show("Đăng Nhập Thành Công");
+                        frmMain.session = 1;
+                        this.Close();
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Đăng nhập không thành công ! vui lòng kiểm tra lại email hoặc mật khẩu");
+                    txtemaildangnhap.Focus();
+                }
             }
         }
     }

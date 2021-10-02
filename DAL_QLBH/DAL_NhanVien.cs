@@ -214,7 +214,7 @@ namespace DAL_QLBH
                 cmd.CommandText = "sp_KiemTraMk";
                 cmd.Parameters.AddWithValue("email", email);
                 cmd.Connection = _conn;
-                if(cmd.ExecuteNonQuery()>0)
+                if(Convert.ToInt32(cmd.ExecuteScalar())>0)
                 {
                     return true;
                 }    

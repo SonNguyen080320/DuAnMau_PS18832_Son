@@ -29,9 +29,6 @@ namespace GUI_QLBH
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnMoHinh = new System.Windows.Forms.Button();
-            this.listBoxHinh = new System.Windows.Forms.ListBox();
-            this.listBoxGhiChu = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtDonGiaNhap = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -55,38 +52,13 @@ namespace GUI_QLBH
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnTimKiem = new System.Windows.Forms.Button();
+            this.btnMoHinh = new System.Windows.Forms.Button();
             this.pictureBoxSP = new System.Windows.Forms.PictureBox();
+            this.txtHinh = new System.Windows.Forms.TextBox();
+            this.txtGhiChu = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvSP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSP)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnMoHinh
-            // 
-            this.btnMoHinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMoHinh.Location = new System.Drawing.Point(1005, 102);
-            this.btnMoHinh.Name = "btnMoHinh";
-            this.btnMoHinh.Size = new System.Drawing.Size(148, 39);
-            this.btnMoHinh.TabIndex = 170;
-            this.btnMoHinh.Text = "Mở hình";
-            this.btnMoHinh.UseVisualStyleBackColor = true;
-            // 
-            // listBoxHinh
-            // 
-            this.listBoxHinh.FormattingEnabled = true;
-            this.listBoxHinh.ItemHeight = 16;
-            this.listBoxHinh.Location = new System.Drawing.Point(768, 102);
-            this.listBoxHinh.Name = "listBoxHinh";
-            this.listBoxHinh.Size = new System.Drawing.Size(220, 84);
-            this.listBoxHinh.TabIndex = 169;
-            // 
-            // listBoxGhiChu
-            // 
-            this.listBoxGhiChu.FormattingEnabled = true;
-            this.listBoxGhiChu.ItemHeight = 16;
-            this.listBoxGhiChu.Location = new System.Drawing.Point(768, 209);
-            this.listBoxGhiChu.Name = "listBoxGhiChu";
-            this.listBoxGhiChu.Size = new System.Drawing.Size(340, 116);
-            this.listBoxGhiChu.TabIndex = 167;
             // 
             // label4
             // 
@@ -164,7 +136,7 @@ namespace GUI_QLBH
             // dtgvSP
             // 
             this.dtgvSP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgvSP.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dtgvSP.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dtgvSP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvSP.Location = new System.Drawing.Point(82, 536);
             this.dtgvSP.Name = "dtgvSP";
@@ -172,6 +144,8 @@ namespace GUI_QLBH
             this.dtgvSP.RowTemplate.Height = 24;
             this.dtgvSP.Size = new System.Drawing.Size(1286, 232);
             this.dtgvSP.TabIndex = 150;
+            this.dtgvSP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvSP_CellContentClick);
+            this.dtgvSP.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvSP_CellContentClick);
             // 
             // txtTenHang
             // 
@@ -242,6 +216,7 @@ namespace GUI_QLBH
             this.btnThoat.TabIndex = 178;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnDanhSach
             // 
@@ -256,6 +231,7 @@ namespace GUI_QLBH
             this.btnDanhSach.Text = "Danh sách";
             this.btnDanhSach.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDanhSach.UseVisualStyleBackColor = false;
+            this.btnDanhSach.Click += new System.EventHandler(this.btnDanhSach_Click);
             // 
             // btnBoQua
             // 
@@ -270,6 +246,7 @@ namespace GUI_QLBH
             this.btnBoQua.Text = "Bỏ qua";
             this.btnBoQua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBoQua.UseVisualStyleBackColor = false;
+            this.btnBoQua.Click += new System.EventHandler(this.btnBoQua_Click);
             // 
             // btnLuu
             // 
@@ -283,6 +260,7 @@ namespace GUI_QLBH
             this.btnLuu.TabIndex = 175;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnSua
             // 
@@ -296,6 +274,7 @@ namespace GUI_QLBH
             this.btnSua.TabIndex = 174;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -310,6 +289,7 @@ namespace GUI_QLBH
             this.btnXoa.Text = "Xóa";
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
@@ -324,6 +304,7 @@ namespace GUI_QLBH
             this.btnThem.Text = "Thêm";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnTimKiem
             // 
@@ -338,20 +319,58 @@ namespace GUI_QLBH
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            // 
+            // btnMoHinh
+            // 
+            this.btnMoHinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMoHinh.Image = global::GUI_QLBH.Properties.Resources.upload;
+            this.btnMoHinh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMoHinh.Location = new System.Drawing.Point(1005, 102);
+            this.btnMoHinh.Name = "btnMoHinh";
+            this.btnMoHinh.Size = new System.Drawing.Size(148, 49);
+            this.btnMoHinh.TabIndex = 170;
+            this.btnMoHinh.Text = "Mở hình";
+            this.btnMoHinh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMoHinh.UseVisualStyleBackColor = true;
+            this.btnMoHinh.Click += new System.EventHandler(this.btnMoHinh_Click);
             // 
             // pictureBoxSP
             // 
             this.pictureBoxSP.Location = new System.Drawing.Point(1171, 102);
             this.pictureBoxSP.Name = "pictureBoxSP";
             this.pictureBoxSP.Size = new System.Drawing.Size(182, 225);
+            this.pictureBoxSP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxSP.TabIndex = 168;
             this.pictureBoxSP.TabStop = false;
+            // 
+            // txtHinh
+            // 
+            this.txtHinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHinh.Location = new System.Drawing.Point(723, 102);
+            this.txtHinh.MaximumSize = new System.Drawing.Size(200, 80);
+            this.txtHinh.MinimumSize = new System.Drawing.Size(250, 50);
+            this.txtHinh.Name = "txtHinh";
+            this.txtHinh.Size = new System.Drawing.Size(250, 50);
+            this.txtHinh.TabIndex = 179;
+            // 
+            // txtGhiChu
+            // 
+            this.txtGhiChu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGhiChu.Location = new System.Drawing.Point(755, 215);
+            this.txtGhiChu.MaximumSize = new System.Drawing.Size(350, 80);
+            this.txtGhiChu.MinimumSize = new System.Drawing.Size(350, 50);
+            this.txtGhiChu.Name = "txtGhiChu";
+            this.txtGhiChu.Size = new System.Drawing.Size(350, 50);
+            this.txtGhiChu.TabIndex = 180;
             // 
             // frmQuanLySanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1455, 768);
+            this.Controls.Add(this.txtGhiChu);
+            this.Controls.Add(this.txtHinh);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnDanhSach);
             this.Controls.Add(this.btnBoQua);
@@ -361,9 +380,7 @@ namespace GUI_QLBH
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.btnMoHinh);
-            this.Controls.Add(this.listBoxHinh);
             this.Controls.Add(this.pictureBoxSP);
-            this.Controls.Add(this.listBoxGhiChu);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtDonGiaNhap);
             this.Controls.Add(this.label8);
@@ -381,6 +398,7 @@ namespace GUI_QLBH
             this.Controls.Add(this.label1);
             this.Name = "frmQuanLySanPham";
             this.Text = "frmQuanLySanPham";
+            this.Load += new System.EventHandler(this.frmQuanLySanPham_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvSP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSP)).EndInit();
             this.ResumeLayout(false);
@@ -391,9 +409,7 @@ namespace GUI_QLBH
         #endregion
 
         private System.Windows.Forms.Button btnMoHinh;
-        private System.Windows.Forms.ListBox listBoxHinh;
         private System.Windows.Forms.PictureBox pictureBoxSP;
-        private System.Windows.Forms.ListBox listBoxGhiChu;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtDonGiaNhap;
         private System.Windows.Forms.Label label8;
@@ -417,5 +433,7 @@ namespace GUI_QLBH
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnTimKiem;
+        private System.Windows.Forms.TextBox txtHinh;
+        private System.Windows.Forms.TextBox txtGhiChu;
     }
 }
