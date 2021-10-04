@@ -27,6 +27,8 @@ namespace GUI_QLBH
             txtemaildangnhap.Text = Properties.Settings.Default.email;
             txtmatkhau.Text = Properties.Settings.Default.pass;
             chboxghinhomatkhau.Checked = true;
+            this.txtmatkhau.PasswordChar = '*';
+            btnHide.Hide();
         }
         public string RanDomString(int size, bool lowerCase) // tạo random chuỗi
         {
@@ -129,6 +131,20 @@ namespace GUI_QLBH
                 }
                 
             }
+        }
+
+        private void btnUnHide_Click(object sender, EventArgs e)
+        {
+            this.txtmatkhau.PasswordChar = '\0';
+            btnHide.Show();
+            btnUnHide.Hide();
+        }
+
+        private void btnHide_Click(object sender, EventArgs e)
+        {
+            this.txtmatkhau.PasswordChar = '*';
+            btnHide.Hide();
+            btnUnHide.Show();
         }
     }
 }

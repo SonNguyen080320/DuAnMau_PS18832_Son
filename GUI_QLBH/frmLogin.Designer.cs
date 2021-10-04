@@ -39,6 +39,8 @@ namespace GUI_QLBH
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnUnHide = new System.Windows.Forms.Button();
+            this.btnHide = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -147,11 +149,37 @@ namespace GUI_QLBH
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
             // 
+            // btnUnHide
+            // 
+            this.btnUnHide.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnUnHide.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnUnHide.Image = global::GUI_QLBH.Properties.Resources.unhide;
+            this.btnUnHide.Location = new System.Drawing.Point(561, 273);
+            this.btnUnHide.Name = "btnUnHide";
+            this.btnUnHide.Size = new System.Drawing.Size(75, 31);
+            this.btnUnHide.TabIndex = 30;
+            this.btnUnHide.UseVisualStyleBackColor = false;
+            this.btnUnHide.Click += new System.EventHandler(this.btnUnHide_Click);
+            // 
+            // btnHide
+            // 
+            this.btnHide.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnHide.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnHide.Image = global::GUI_QLBH.Properties.Resources.hide;
+            this.btnHide.Location = new System.Drawing.Point(561, 275);
+            this.btnHide.Name = "btnHide";
+            this.btnHide.Size = new System.Drawing.Size(75, 31);
+            this.btnHide.TabIndex = 31;
+            this.btnHide.UseVisualStyleBackColor = false;
+            this.btnHide.Click += new System.EventHandler(this.btnHide_Click);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(799, 469);
+            this.Controls.Add(this.btnHide);
+            this.Controls.Add(this.btnUnHide);
             this.Controls.Add(this.btnthoat);
             this.Controls.Add(this.btndangnhap);
             this.Controls.Add(this.lbquenmatkhau);
@@ -183,5 +211,7 @@ namespace GUI_QLBH
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnUnHide;
+        private System.Windows.Forms.Button btnHide;
     }
 }

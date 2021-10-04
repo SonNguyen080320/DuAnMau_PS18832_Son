@@ -40,6 +40,8 @@ namespace GUI_QLBH
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.btnDoiMK = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnHide = new System.Windows.Forms.Button();
+            this.btnUnHide = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnThoat
@@ -53,6 +55,7 @@ namespace GUI_QLBH
             this.btnThoat.TabIndex = 43;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // label5
             // 
@@ -149,11 +152,37 @@ namespace GUI_QLBH
             this.label1.TabIndex = 33;
             this.label1.Text = "Đổi Mật Khẩu Nhân Viên";
             // 
+            // btnHide
+            // 
+            this.btnHide.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnHide.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnHide.Image = global::GUI_QLBH.Properties.Resources.hide;
+            this.btnHide.Location = new System.Drawing.Point(672, 407);
+            this.btnHide.Name = "btnHide";
+            this.btnHide.Size = new System.Drawing.Size(75, 31);
+            this.btnHide.TabIndex = 45;
+            this.btnHide.UseVisualStyleBackColor = false;
+            this.btnHide.Click += new System.EventHandler(this.btnHide_Click);
+            // 
+            // btnUnHide
+            // 
+            this.btnUnHide.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnUnHide.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnUnHide.Image = global::GUI_QLBH.Properties.Resources.unhide;
+            this.btnUnHide.Location = new System.Drawing.Point(672, 407);
+            this.btnUnHide.Name = "btnUnHide";
+            this.btnUnHide.Size = new System.Drawing.Size(75, 31);
+            this.btnUnHide.TabIndex = 44;
+            this.btnUnHide.UseVisualStyleBackColor = false;
+            this.btnUnHide.Click += new System.EventHandler(this.btnUnHide_Click);
+            // 
             // frmDoiMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 630);
+            this.ClientSize = new System.Drawing.Size(882, 630);
+            this.Controls.Add(this.btnHide);
+            this.Controls.Add(this.btnUnHide);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtXacNhanPass);
@@ -186,5 +215,7 @@ namespace GUI_QLBH
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Button btnDoiMK;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnHide;
+        private System.Windows.Forms.Button btnUnHide;
     }
 }

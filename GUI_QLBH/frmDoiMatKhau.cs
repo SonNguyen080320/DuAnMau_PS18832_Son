@@ -22,13 +22,17 @@ namespace GUI_QLBH
         public frmDoiMatKhau(string _email) : this()
         {
             email = _email;
-            
+
         }
         BUS_NhanVien busNhanVien = new BUS_NhanVien();
         private void frmDoiMatKhau_Load(object sender, EventArgs e)
         {
             txtEmail.Enabled = false;
             txtEmail.Text = email;
+            this.txtPassCu.PasswordChar = '*';
+            this.txtPassMoi.PasswordChar = '*';
+            this.txtXacNhanPass.PasswordChar = '*';
+            btnHide.Hide();
         }
 
         private void btnDoiMK_Click(object sender, EventArgs e)
@@ -72,6 +76,32 @@ namespace GUI_QLBH
                 }
 
             }
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn muốn thoát chức năng đổi mật khẩu ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void btnHide_Click(object sender, EventArgs e)
+        {
+            this.txtPassCu.PasswordChar = '*';
+            this.txtPassMoi.PasswordChar = '*';
+            this.txtXacNhanPass.PasswordChar = '*';
+            btnHide.Hide();
+            btnUnHide.Show();
+        }
+
+        private void btnUnHide_Click(object sender, EventArgs e)
+        {
+            this.txtPassCu.PasswordChar = '\0';
+            this.txtPassMoi.PasswordChar = '\0';
+            this.txtXacNhanPass.PasswordChar = '\0';
+            btnHide.Show();
+            btnUnHide.Hide();
         }
     }
 }

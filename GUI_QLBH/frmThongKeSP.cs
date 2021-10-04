@@ -44,5 +44,10 @@ namespace GUI_QLBH
             dataGridView1.Columns[1].HeaderText = "Tên nhân viên";
             dataGridView1.Columns[2].HeaderText = "Số sản phẩm nhập kho";
         }
+
+        private void frmThongKeSP_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
