@@ -109,5 +109,36 @@ namespace DAL_QLBH
             finally { _conn.Close(); }
             return false;
         }
+        public DataTable thongKeTon()
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "ThongKeTon";
+                cmd.Connection = _conn;
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                return dt;
+            }
+            finally { _conn.Close(); }
+        }
+        public DataTable thongKeSP()
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "ThongKeSP";
+                cmd.Connection = _conn;
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                return dt;
+            }
+            finally { _conn.Close(); }
+        }
+
     }
 }

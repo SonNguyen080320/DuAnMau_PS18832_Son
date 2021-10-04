@@ -108,6 +108,7 @@ namespace GUI_QLBH
                         {
                             Properties.Settings.Default.email = "";
                             Properties.Settings.Default.pass = "";
+                            Properties.Settings.Default.Save();
                         }
                         DataTable dt = busNhanVien.VaiTroNhanVien(nv.email);
                         if (bool.Parse(dt.Rows[0][0].ToString()) == true)

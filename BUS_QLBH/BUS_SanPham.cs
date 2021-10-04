@@ -32,5 +32,13 @@ namespace BUS_QLBH
         {
             return dalSanPham.SuaSanPham(sp);
         }
+        public DataTable thongKeTon()
+        {
+            return dalSanPham.thongKeTon();
+        }
+        public DataTable thongKeSP()
+        {
+            return dalSanPham.thongKeSP();
+        }    
     }
 }

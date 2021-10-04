@@ -202,12 +202,13 @@ namespace GUI_QLBH
         {
             if (MessageBox.Show("Bạn muốn đăng xuất tài khoản ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                label2.Text = "Email";
-                hồSơNhânViênToolStripMenuItem.Visible = false;
-                đăngXuấtToolStripMenuItem.Visible = false;
-                thốngKêToolStripMenuItem.Visible = false;
-                danhMụcToolStripMenuItem.Visible = false;
-                đăngNhậpToolStripMenuItem.Enabled = true;
+                //label2.Text = "Email";
+                //hồSơNhânViênToolStripMenuItem.Visible = false;
+                //đăngXuấtToolStripMenuItem.Visible = false;
+                //thốngKêToolStripMenuItem.Visible = false;
+                //danhMụcToolStripMenuItem.Visible = false;
+                //đăngNhậpToolStripMenuItem.Enabled = true;
+                Application.Restart();
             }
         }
     }

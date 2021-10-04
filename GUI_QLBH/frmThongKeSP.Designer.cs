@@ -39,6 +39,8 @@ namespace GUI_QLBH
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 71);
             this.dataGridView1.Name = "dataGridView1";
@@ -64,12 +66,14 @@ namespace GUI_QLBH
             this.sảnPhẩmNhậpKhoToolStripMenuItem.Name = "sảnPhẩmNhậpKhoToolStripMenuItem";
             this.sảnPhẩmNhậpKhoToolStripMenuItem.Size = new System.Drawing.Size(154, 24);
             this.sảnPhẩmNhậpKhoToolStripMenuItem.Text = "Sản phẩm nhập kho";
+            this.sảnPhẩmNhậpKhoToolStripMenuItem.Click += new System.EventHandler(this.sảnPhẩmNhậpKhoToolStripMenuItem_Click);
             // 
             // sốLượngTồnToolStripMenuItem
             // 
             this.sốLượngTồnToolStripMenuItem.Name = "sốLượngTồnToolStripMenuItem";
             this.sốLượngTồnToolStripMenuItem.Size = new System.Drawing.Size(109, 24);
             this.sốLượngTồnToolStripMenuItem.Text = "Số lượng tồn";
+            this.sốLượngTồnToolStripMenuItem.Click += new System.EventHandler(this.sốLượngTồnToolStripMenuItem_Click);
             // 
             // frmThongKeSP
             // 
