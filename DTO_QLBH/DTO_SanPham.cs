@@ -27,7 +27,7 @@ namespace DTO_QLBH
             this.GhiChu = ghiChu;
             this.EmailNV = emailNV;
         }
-        public DTO_SanPham(int maHang,string tenHang, int soLuong, float donGiaNhap, float donGiaBan, string hinhAnh, string ghiChu)
+        public DTO_SanPham(int maHang,string tenHang, int soLuong, float donGiaNhap, float donGiaBan, string hinhAnh, string ghiChu,string email)
         {
             this.MaHang = maHang;
             this.TenHang = tenHang;
@@ -36,7 +36,7 @@ namespace DTO_QLBH
             this.DonGiaBan = donGiaBan;
             this.HinhAnh = hinhAnh;
             this.GhiChu = ghiChu;
-            
+            this.EmailNV = email;
         }
         public DTO_SanPham()
         {

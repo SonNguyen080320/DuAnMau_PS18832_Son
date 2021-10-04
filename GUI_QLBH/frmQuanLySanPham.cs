@@ -189,21 +189,25 @@ namespace GUI_QLBH
             }
             else
             {
-                DTO_SanPham sp = new DTO_SanPham(int.Parse(txtMaHang.Text),txtTenHang.Text, soLuong, donGiaNhap, donGiaBan, txtHinh.Text, txtGhiChu.Text);
-                if (busSanPham.SuaSanPham(sp))
+                if (MessageBox.Show("Bạn muốn thêm sản phẩm này", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    if(txtHinh.Text!=checkUrlImage)
+                    DTO_SanPham sp = new DTO_SanPham(int.Parse(txtMaHang.Text), txtTenHang.Text, soLuong, donGiaNhap, donGiaBan, txtHinh.Text, txtGhiChu.Text, frmMain.mail);
+                    if (busSanPham.SuaSanPham(sp))
                     {
-                        File.Copy(fileAddress, fileName, true);
-                    }    
-                    MessageBox.Show("Cập nhật sản phẩm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    ReSetValue();
-                    loadGridview_SanPham();
-                }
-                else
-                {
-                    MessageBox.Show("Cập nhật sản phẩm thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                        if (txtHinh.Text != checkUrlImage)
+                        {
+                            File.Copy(fileAddress, fileSavePath, true);
+                        }
+                        MessageBox.Show("Cập nhật sản phẩm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ReSetValue();
+                        loadGridview_SanPham();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cập nhật sản phẩm thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }    
+                
             }
         }
 
@@ -241,18 +245,21 @@ namespace GUI_QLBH
             }    
             else
             {
-                DTO_SanPham sp = new DTO_SanPham(txtTenHang.Text, soLuong, donGiaNhap, donGiaBan, txtHinh.Text, txtGhiChu.Text, frmMain.mail);
-                if(busSanPham.ThemSanPham(sp))
+                if(MessageBox.Show("Bạn muốn thêm sản phẩm này","Thông báo",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
                 {
-                    MessageBox.Show("Thêm sản phẩm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    File.Copy(fileAddress, fileName, true);
-                    ReSetValue();
-                    loadGridview_SanPham();
-                }    
-                else
-                {
-                    MessageBox.Show("Thêm sản phẩm thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }    
+                    DTO_SanPham sp = new DTO_SanPham(txtTenHang.Text, soLuong, donGiaNhap, donGiaBan, txtHinh.Text, txtGhiChu.Text, frmMain.mail);
+                    if (busSanPham.ThemSanPham(sp))
+                    {
+                        MessageBox.Show("Thêm sản phẩm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        File.Copy(fileAddress, fileSavePath, true);
+                        ReSetValue();
+                        loadGridview_SanPham();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm sản phẩm thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }     
             }    
         }
 
@@ -260,8 +267,9 @@ namespace GUI_QLBH
         {
             OpenFileDialog dlgOpen = new OpenFileDialog();
             dlgOpen.Filter = " Bitmap(*.bmp)|*.bmp|JPEG(*jpg)|*.jpg|GIF(*.gif)|*.gif|All Files(*.*)|*.*";
-            dlgOpen.FilterIndex = 2;
+            dlgOpen.FilterIndex = 1;
             dlgOpen.Title = "Chọn hình minh họa cho sản phẩm";
+            dlgOpen.RestoreDirectory = true;
             if(dlgOpen.ShowDialog()==DialogResult.OK)
             {
                 fileAddress = dlgOpen.FileName;
@@ -301,7 +309,7 @@ namespace GUI_QLBH
             } 
             else
             {
-                MessageBox.Show("Dòng không tồn tại dữ liệu");
+                MessageBox.Show("không tồn tại dữ liệu");
             }    
         }
     }

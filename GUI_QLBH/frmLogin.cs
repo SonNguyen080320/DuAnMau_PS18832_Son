@@ -24,7 +24,9 @@ namespace GUI_QLBH
         BUS_NhanVien busNhanVien = new BUS_QLBH.BUS_NhanVien();
         private void frmLogin_Load(object sender, EventArgs e)
         {
-
+            txtemaildangnhap.Text = Properties.Settings.Default.email;
+            txtmatkhau.Text = Properties.Settings.Default.pass;
+            chboxghinhomatkhau.Checked = true;
         }
         public string RanDomString(int size, bool lowerCase) // tạo random chuỗi
         {
@@ -96,6 +98,17 @@ namespace GUI_QLBH
                     }
                     else
                     {
+                        if (chboxghinhomatkhau.Checked == true)
+                        {
+                            Properties.Settings.Default.email = txtemaildangnhap.Text;
+                            Properties.Settings.Default.pass = txtmatkhau.Text;
+                            Properties.Settings.Default.Save();
+                        }
+                        else
+                        {
+                            Properties.Settings.Default.email = "";
+                            Properties.Settings.Default.pass = "";
+                        }
                         DataTable dt = busNhanVien.VaiTroNhanVien(nv.email);
                         if (bool.Parse(dt.Rows[0][0].ToString()) == true)
                         {
@@ -113,6 +126,7 @@ namespace GUI_QLBH
                     MessageBox.Show("Đăng nhập không thành công ! vui lòng kiểm tra lại email hoặc mật khẩu");
                     txtemaildangnhap.Focus();
                 }
+                
             }
         }
     }

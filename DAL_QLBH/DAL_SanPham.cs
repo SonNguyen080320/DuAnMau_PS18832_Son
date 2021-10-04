@@ -99,12 +99,12 @@ namespace DAL_QLBH
                 cmd.Parameters.AddWithValue("DonGiaBan", sp.donGiaBan);
                 cmd.Parameters.AddWithValue("HinhAnh", sp.hinhAnh);
                 cmd.Parameters.AddWithValue("GhiChu", sp.ghiChu);
-                //cmd.Parameters.AddWithValue("email", sp.emailNv);
+                cmd.Parameters.AddWithValue("email", sp.emailNv);
                 cmd.Connection = _conn;
-                if (cmd.ExecuteNonQuery() > 0)
+                if(cmd.ExecuteNonQuery()>0)
                 {
                     return true;
-                }
+                }    
             }
             finally { _conn.Close(); }
             return false;
