@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -209,6 +210,32 @@ namespace GUI_QLBH
                 //danhMụcToolStripMenuItem.Visible = false;
                 //đăngNhậpToolStripMenuItem.Enabled = true;
                 Application.Restart();
+            }
+        }
+
+        private void giớiThiệuPhầnMềmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "gioi thieu .pdf");
+                System.Diagnostics.Process.Start(path);
+            }
+            catch(FileNotFoundException)
+            {
+                MessageBox.Show("The file is not found in the specified location");
+            }
+        }
+
+        private void hướngDẫnSửDụngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "gioi thieu .pdf");
+                System.Diagnostics.Process.Start(path);
+            }
+            catch (FileNotFoundException)
+            {
+                MessageBox.Show("The file is not found in the specified location");
             }
         }
     }

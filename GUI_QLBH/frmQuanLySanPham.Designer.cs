@@ -44,6 +44,9 @@ namespace GUI_QLBH
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtHinh = new System.Windows.Forms.TextBox();
+            this.txtGhiChu = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnDanhSach = new System.Windows.Forms.Button();
             this.btnBoQua = new System.Windows.Forms.Button();
@@ -54,9 +57,8 @@ namespace GUI_QLBH
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnMoHinh = new System.Windows.Forms.Button();
             this.pictureBoxSP = new System.Windows.Forms.PictureBox();
-            this.txtHinh = new System.Windows.Forms.TextBox();
-            this.txtGhiChu = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvSP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSP)).BeginInit();
             this.SuspendLayout();
             // 
@@ -197,11 +199,42 @@ namespace GUI_QLBH
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Location = new System.Drawing.Point(560, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(257, 55);
             this.label1.TabIndex = 144;
             this.label1.Text = "Sản Phẩm";
+            // 
+            // txtHinh
+            // 
+            this.txtHinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHinh.Location = new System.Drawing.Point(723, 102);
+            this.txtHinh.MaximumSize = new System.Drawing.Size(200, 80);
+            this.txtHinh.MinimumSize = new System.Drawing.Size(250, 50);
+            this.txtHinh.Name = "txtHinh";
+            this.txtHinh.Size = new System.Drawing.Size(250, 50);
+            this.txtHinh.TabIndex = 179;
+            // 
+            // txtGhiChu
+            // 
+            this.txtGhiChu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGhiChu.Location = new System.Drawing.Point(755, 215);
+            this.txtGhiChu.MaximumSize = new System.Drawing.Size(350, 80);
+            this.txtGhiChu.MinimumSize = new System.Drawing.Size(350, 50);
+            this.txtGhiChu.Name = "txtGhiChu";
+            this.txtGhiChu.Size = new System.Drawing.Size(350, 27);
+            this.txtGhiChu.TabIndex = 180;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::GUI_QLBH.Properties.Resources.prd;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Location = new System.Drawing.Point(1337, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(76, 62);
+            this.pictureBox1.TabIndex = 181;
+            this.pictureBox1.TabStop = false;
             // 
             // btnThoat
             // 
@@ -344,31 +377,12 @@ namespace GUI_QLBH
             this.pictureBoxSP.TabIndex = 168;
             this.pictureBoxSP.TabStop = false;
             // 
-            // txtHinh
-            // 
-            this.txtHinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHinh.Location = new System.Drawing.Point(723, 102);
-            this.txtHinh.MaximumSize = new System.Drawing.Size(200, 80);
-            this.txtHinh.MinimumSize = new System.Drawing.Size(250, 50);
-            this.txtHinh.Name = "txtHinh";
-            this.txtHinh.Size = new System.Drawing.Size(250, 50);
-            this.txtHinh.TabIndex = 179;
-            // 
-            // txtGhiChu
-            // 
-            this.txtGhiChu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGhiChu.Location = new System.Drawing.Point(755, 215);
-            this.txtGhiChu.MaximumSize = new System.Drawing.Size(350, 80);
-            this.txtGhiChu.MinimumSize = new System.Drawing.Size(350, 50);
-            this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(350, 50);
-            this.txtGhiChu.TabIndex = 180;
-            // 
             // frmQuanLySanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1455, 768);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtGhiChu);
             this.Controls.Add(this.txtHinh);
             this.Controls.Add(this.btnThoat);
@@ -400,6 +414,7 @@ namespace GUI_QLBH
             this.Text = "frmQuanLySanPham";
             this.Load += new System.EventHandler(this.frmQuanLySanPham_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvSP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSP)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -435,5 +450,6 @@ namespace GUI_QLBH
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.TextBox txtHinh;
         private System.Windows.Forms.TextBox txtGhiChu;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

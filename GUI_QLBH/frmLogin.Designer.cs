@@ -38,9 +38,9 @@ namespace GUI_QLBH
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnUnHide = new System.Windows.Forms.Button();
             this.btnHide = new System.Windows.Forms.Button();
+            this.btnUnHide = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,9 +81,9 @@ namespace GUI_QLBH
             this.lbquenmatkhau.AutoSize = true;
             this.lbquenmatkhau.Location = new System.Drawing.Point(441, 325);
             this.lbquenmatkhau.Name = "lbquenmatkhau";
-            this.lbquenmatkhau.Size = new System.Drawing.Size(114, 17);
+            this.lbquenmatkhau.Size = new System.Drawing.Size(117, 17);
             this.lbquenmatkhau.TabIndex = 27;
-            this.lbquenmatkhau.Text = "quên mật khẩu ?";
+            this.lbquenmatkhau.Text = "Quên mật khẩu ?";
             this.lbquenmatkhau.Click += new System.EventHandler(this.lbquenmatkhau_Click);
             // 
             // chboxghinhomatkhau
@@ -91,9 +91,9 @@ namespace GUI_QLBH
             this.chboxghinhomatkhau.AutoSize = true;
             this.chboxghinhomatkhau.Location = new System.Drawing.Point(277, 321);
             this.chboxghinhomatkhau.Name = "chboxghinhomatkhau";
-            this.chboxghinhomatkhau.Size = new System.Drawing.Size(139, 21);
+            this.chboxghinhomatkhau.Size = new System.Drawing.Size(142, 21);
             this.chboxghinhomatkhau.TabIndex = 26;
-            this.chboxghinhomatkhau.Text = "ghi nhớ mật khẩu";
+            this.chboxghinhomatkhau.Text = "Ghi nhớ mật khẩu";
             this.chboxghinhomatkhau.UseVisualStyleBackColor = true;
             // 
             // txtmatkhau
@@ -140,14 +140,17 @@ namespace GUI_QLBH
             this.label1.TabIndex = 21;
             this.label1.Text = "Email đăng nhập :";
             // 
-            // pictureBox1
+            // btnHide
             // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(289, 49);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(181, 119);
-            this.pictureBox1.TabIndex = 20;
-            this.pictureBox1.TabStop = false;
+            this.btnHide.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnHide.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnHide.Image = global::GUI_QLBH.Properties.Resources.hide;
+            this.btnHide.Location = new System.Drawing.Point(561, 273);
+            this.btnHide.Name = "btnHide";
+            this.btnHide.Size = new System.Drawing.Size(75, 31);
+            this.btnHide.TabIndex = 31;
+            this.btnHide.UseVisualStyleBackColor = false;
+            this.btnHide.Click += new System.EventHandler(this.btnHide_Click);
             // 
             // btnUnHide
             // 
@@ -161,17 +164,15 @@ namespace GUI_QLBH
             this.btnUnHide.UseVisualStyleBackColor = false;
             this.btnUnHide.Click += new System.EventHandler(this.btnUnHide_Click);
             // 
-            // btnHide
+            // pictureBox1
             // 
-            this.btnHide.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnHide.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnHide.Image = global::GUI_QLBH.Properties.Resources.hide;
-            this.btnHide.Location = new System.Drawing.Point(561, 275);
-            this.btnHide.Name = "btnHide";
-            this.btnHide.Size = new System.Drawing.Size(75, 31);
-            this.btnHide.TabIndex = 31;
-            this.btnHide.UseVisualStyleBackColor = false;
-            this.btnHide.Click += new System.EventHandler(this.btnHide_Click);
+            this.pictureBox1.BackgroundImage = global::GUI_QLBH.Properties.Resources._140831;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(314, 40);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(162, 119);
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
             // 
             // frmLogin
             // 

@@ -25,10 +25,6 @@ namespace DAL_QLBH
                 if (Convert.ToInt16(cmd.ExecuteScalar()) > 0)
                     return true;
             }
-            catch (Exception n)
-            {
-
-            }
             finally
             {
                 _conn.Close();
@@ -221,6 +217,22 @@ namespace DAL_QLBH
             }
             finally { _conn.Close(); }
             return false;
+        }
+        public string matKhau(string email)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "sp_MatKhau";
+                cmd.Parameters.AddWithValue("email", email);
+                cmd.Connection = _conn;
+                var mk = cmd.ExecuteScalar();
+                return mk.ToString();
+            }
+            finally { _conn.Close(); }
+            
         }
     }
 }

@@ -19,7 +19,7 @@ namespace GUI_QLBH
             InitializeComponent();
         }
 
-
+        
         BUS_NhanVien busNhanVien = new BUS_NhanVien();
         private void frmQuanLyNhanVien_Load(object sender, EventArgs e)
         {
@@ -121,16 +121,24 @@ namespace GUI_QLBH
         {
             if (MessageBox.Show("Bạn chắc chắn muốn xóa nhân viên", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                if (busNhanVien.XoaNhanVien(txtEmail.Text.Trim()))
+                if(frmMain.mail==frmLogin.email)
                 {
-                    MessageBox.Show("Xóa nhân viên thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    loadGridView_NhanVien();
-                    resetValue();
-                }
+                    MessageBox.Show("Bạn không thể xóa chính bản thân bạn", "Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                } 
                 else
                 {
-                    MessageBox.Show("Xóa nhân viên không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (busNhanVien.XoaNhanVien(txtEmail.Text.Trim()))
+                    {
+                        MessageBox.Show("Xóa nhân viên thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        loadGridView_NhanVien();
+                        resetValue();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa nhân viên không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
+                
             }
         }
 

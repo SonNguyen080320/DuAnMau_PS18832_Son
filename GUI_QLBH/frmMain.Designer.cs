@@ -97,7 +97,7 @@ namespace GUI_QLBH
             // 
             this.đăngNhậpToolStripMenuItem.Image = global::GUI_QLBH.Properties.Resources.login;
             this.đăngNhậpToolStripMenuItem.Name = "đăngNhậpToolStripMenuItem";
-            this.đăngNhậpToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.đăngNhậpToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
             this.đăngNhậpToolStripMenuItem.Text = "Đăng Nhập";
             this.đăngNhậpToolStripMenuItem.Click += new System.EventHandler(this.đăngNhậpToolStripMenuItem_Click);
             // 
@@ -105,7 +105,7 @@ namespace GUI_QLBH
             // 
             this.đăngXuấtToolStripMenuItem.Image = global::GUI_QLBH.Properties.Resources.logout;
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng Xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
@@ -113,7 +113,7 @@ namespace GUI_QLBH
             // 
             this.hồSơNhânViênToolStripMenuItem.Image = global::GUI_QLBH.Properties.Resources.profile;
             this.hồSơNhânViênToolStripMenuItem.Name = "hồSơNhânViênToolStripMenuItem";
-            this.hồSơNhânViênToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.hồSơNhânViênToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
             this.hồSơNhânViênToolStripMenuItem.Text = "Hồ Sơ Nhân Viên";
             this.hồSơNhânViênToolStripMenuItem.Click += new System.EventHandler(this.hồSơNhânViênToolStripMenuItem_Click);
             // 
@@ -121,7 +121,7 @@ namespace GUI_QLBH
             // 
             this.thoátToolStripMenuItem.Image = global::GUI_QLBH.Properties.Resources.exit;
             this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
             this.thoátToolStripMenuItem.Text = "Thoát";
             this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click);
             // 
@@ -191,6 +191,7 @@ namespace GUI_QLBH
             this.hướngDẫnSửDụngToolStripMenuItem.Name = "hướngDẫnSửDụngToolStripMenuItem";
             this.hướngDẫnSửDụngToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
             this.hướngDẫnSửDụngToolStripMenuItem.Text = "Hướng Dẫn Sử Dụng";
+            this.hướngDẫnSửDụngToolStripMenuItem.Click += new System.EventHandler(this.hướngDẫnSửDụngToolStripMenuItem_Click);
             // 
             // giớiThiệuPhầnMềmToolStripMenuItem
             // 
@@ -198,11 +199,14 @@ namespace GUI_QLBH
             this.giớiThiệuPhầnMềmToolStripMenuItem.Name = "giớiThiệuPhầnMềmToolStripMenuItem";
             this.giớiThiệuPhầnMềmToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
             this.giớiThiệuPhầnMềmToolStripMenuItem.Text = "Giới Thiệu Phần Mềm";
+            this.giớiThiệuPhầnMềmToolStripMenuItem.Click += new System.EventHandler(this.giớiThiệuPhầnMềmToolStripMenuItem_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::GUI_QLBH.Properties.Resources.sky;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1446, 763);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

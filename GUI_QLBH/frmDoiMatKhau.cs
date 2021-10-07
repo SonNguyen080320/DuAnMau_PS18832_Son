@@ -65,16 +65,23 @@ namespace GUI_QLBH
                     string matKhauCu = busNhanVien.encrytion(txtPassCu.Text);
                     string matKhauMoi = busNhanVien.encrytion(txtPassMoi.Text);
                     string xacNhanMatKhau = busNhanVien.encrytion(txtXacNhanPass.Text);
-                    if (busNhanVien.UpdateMatKhau(txtEmail.Text, matKhauCu, matKhauMoi, xacNhanMatKhau))
+                    if(busNhanVien.matKhau(txtEmail.Text)!=matKhauCu)
                     {
-                        frmMain.profile = 1;
-                        frmMain.session = 0;
-                        busNhanVien.sendEmail(txtEmail.Text, matKhauMoi);
-                        MessageBox.Show("Cập nhật mật khẩu thành công!!! Mời bạn đăng nhập lại hệ thống");
-                        this.Close();
+                        MessageBox.Show("Mật khẩu củ không chính xác !!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+                    else
+                    {
+                        if (busNhanVien.UpdateMatKhau(txtEmail.Text, matKhauCu, matKhauMoi, xacNhanMatKhau))
+                        {
+                            frmMain.profile = 1;
+                            frmMain.session = 0;
+                            busNhanVien.sendEmail(txtEmail.Text, matKhauMoi);
+                            MessageBox.Show("Cập nhật mật khẩu thành công!!! Mời bạn đăng nhập lại hệ thống");
+                            this.Close();
+                        }
                     }
                 }
-
             }
         }
 

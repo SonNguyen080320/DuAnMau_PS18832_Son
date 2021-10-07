@@ -108,5 +108,9 @@ namespace BUS_QLBH
         {
             return dalNhanVien.KiemTraMatKhau(email);
         }    
+        public string matKhau(string email)
+        {
+            return dalNhanVien.matKhau(email);
+        }    
     }
 }

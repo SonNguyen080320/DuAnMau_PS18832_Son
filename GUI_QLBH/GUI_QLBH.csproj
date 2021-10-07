@@ -210,5 +210,23 @@
   <ItemGroup>
     <None Include="Resources\hide.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sky.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\staffmn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\140831.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\change.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
