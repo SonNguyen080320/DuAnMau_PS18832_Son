@@ -1,0 +1,6 @@
+D:\KY_4\SOF205_DU_AN_MAU\PS18832_DuAnMau_NguyenQuangSon\DTO_QLBH\bin\Release\DTO_QLBH.dll
+D:\KY_4\SOF205_DU_AN_MAU\PS18832_DuAnMau_NguyenQuangSon\DTO_QLBH\bin\Release\DTO_QLBH.pdb
+D:\KY_4\SOF205_DU_AN_MAU\PS18832_DuAnMau_NguyenQuangSon\DTO_QLBH\obj\Release\DTO_QLBH.csprojAssemblyReference.cache
+D:\KY_4\SOF205_DU_AN_MAU\PS18832_DuAnMau_NguyenQuangSon\DTO_QLBH\obj\Release\DTO_QLBH.csproj.CoreCompileInputs.cache
+D:\KY_4\SOF205_DU_AN_MAU\PS18832_DuAnMau_NguyenQuangSon\DTO_QLBH\obj\Release\DTO_QLBH.dll
+D:\KY_4\SOF205_DU_AN_MAU\PS18832_DuAnMau_NguyenQuangSon\DTO_QLBH\obj\Release\DTO_QLBH.pdb

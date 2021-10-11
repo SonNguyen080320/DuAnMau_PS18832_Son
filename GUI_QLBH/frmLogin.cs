@@ -22,7 +22,6 @@ namespace GUI_QLBH
             InitializeComponent();
         }
         BUS_NhanVien busNhanVien = new BUS_QLBH.BUS_NhanVien();
-        public static string email;
         private void frmLogin_Load(object sender, EventArgs e)
         {
             txtemaildangnhap.Text = Properties.Settings.Default.email;
@@ -92,7 +91,6 @@ namespace GUI_QLBH
                 if (busNhanVien.NhanVienDangNhap(nv))
                 {
                     frmMain.mail = nv.email;
-                    email = nv.email;
                     if (busNhanVien.KiemTraMatKhau(txtemaildangnhap.Text))
                     {
                         MessageBox.Show("Chào mừng bạn đến với phần mềm quản lý bán hàng. Bạn cần đổi mật khẩu trước khi sử dụng");

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL_QLBH", "DAL_QLBH\DAL_QL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO_QLBH", "DTO_QLBH\DTO_QLBH.csproj", "{B91B0063-BB08-4C83-A93D-1407BF72EA9A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL_QLBHTests", "DAL_QLBHTests\DAL_QLBHTests.csproj", "{AACD8B02-E28F-4106-8C40-D406ABE44447}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{B91B0063-BB08-4C83-A93D-1407BF72EA9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B91B0063-BB08-4C83-A93D-1407BF72EA9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B91B0063-BB08-4C83-A93D-1407BF72EA9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AACD8B02-E28F-4106-8C40-D406ABE44447}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AACD8B02-E28F-4106-8C40-D406ABE44447}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AACD8B02-E28F-4106-8C40-D406ABE44447}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AACD8B02-E28F-4106-8C40-D406ABE44447}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

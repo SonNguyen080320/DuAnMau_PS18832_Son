@@ -121,7 +121,7 @@ namespace GUI_QLBH
         {
             if (MessageBox.Show("Bạn chắc chắn muốn xóa nhân viên", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                if(frmMain.mail==frmLogin.email)
+                if(frmMain.mail==txtEmail.Text.Trim())
                 {
                     MessageBox.Show("Bạn không thể xóa chính bản thân bạn", "Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 } 

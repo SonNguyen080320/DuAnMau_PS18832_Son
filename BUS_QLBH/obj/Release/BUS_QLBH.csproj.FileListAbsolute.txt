@@ -1,0 +1,11 @@
+D:\KY_4\SOF205_DU_AN_MAU\PS18832_DuAnMau_NguyenQuangSon\BUS_QLBH\bin\Release\BUS_QLBH.dll
+D:\KY_4\SOF205_DU_AN_MAU\PS18832_DuAnMau_NguyenQuangSon\BUS_QLBH\bin\Release\BUS_QLBH.pdb
+D:\KY_4\SOF205_DU_AN_MAU\PS18832_DuAnMau_NguyenQuangSon\BUS_QLBH\bin\Release\DAL_QLBH.dll
+D:\KY_4\SOF205_DU_AN_MAU\PS18832_DuAnMau_NguyenQuangSon\BUS_QLBH\bin\Release\DTO_QLBH.dll
+D:\KY_4\SOF205_DU_AN_MAU\PS18832_DuAnMau_NguyenQuangSon\BUS_QLBH\bin\Release\DAL_QLBH.pdb
+D:\KY_4\SOF205_DU_AN_MAU\PS18832_DuAnMau_NguyenQuangSon\BUS_QLBH\bin\Release\DTO_QLBH.pdb
+D:\KY_4\SOF205_DU_AN_MAU\PS18832_DuAnMau_NguyenQuangSon\BUS_QLBH\obj\Release\BUS_QLBH.csprojAssemblyReference.cache
+D:\KY_4\SOF205_DU_AN_MAU\PS18832_DuAnMau_NguyenQuangSon\BUS_QLBH\obj\Release\BUS_QLBH.csproj.CoreCompileInputs.cache
+D:\KY_4\SOF205_DU_AN_MAU\PS18832_DuAnMau_NguyenQuangSon\BUS_QLBH\obj\Release\BUS_QLBH.csproj.CopyComplete
+D:\KY_4\SOF205_DU_AN_MAU\PS18832_DuAnMau_NguyenQuangSon\BUS_QLBH\obj\Release\BUS_QLBH.dll
+D:\KY_4\SOF205_DU_AN_MAU\PS18832_DuAnMau_NguyenQuangSon\BUS_QLBH\obj\Release\BUS_QLBH.pdb
