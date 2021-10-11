@@ -68,7 +68,7 @@ namespace GUI_QLBH
                     if(busNhanVien.matKhau(txtEmail.Text)!=matKhauCu)
                     {
                         MessageBox.Show("Mật khẩu củ không chính xác !!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                        txtPassCu.Focus();
                     }
                     else
                     {
