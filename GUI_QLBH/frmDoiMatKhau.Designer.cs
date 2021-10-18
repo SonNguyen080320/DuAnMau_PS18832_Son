@@ -208,6 +208,7 @@ namespace GUI_QLBH
             this.Controls.Add(this.btnDoiMK);
             this.Controls.Add(this.label1);
             this.Name = "frmDoiMatKhau";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDoiMatKhau";
             this.Load += new System.EventHandler(this.frmDoiMatKhau_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

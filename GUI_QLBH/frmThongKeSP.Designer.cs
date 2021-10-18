@@ -83,6 +83,7 @@ namespace GUI_QLBH
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "frmThongKeSP";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmThongKeSP";
             this.Load += new System.EventHandler(this.frmThongKeSP_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

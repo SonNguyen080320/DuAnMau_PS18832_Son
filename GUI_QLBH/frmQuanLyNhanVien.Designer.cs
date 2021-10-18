@@ -447,6 +447,7 @@ namespace GUI_QLBH
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmQuanLyNhanVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmQuanLyNhanVien";
             this.Load += new System.EventHandler(this.frmQuanLyNhanVien_Load);
             this.groupBox3.ResumeLayout(false);

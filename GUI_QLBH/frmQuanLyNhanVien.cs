@@ -289,49 +289,53 @@ namespace GUI_QLBH
         private void dtgvNV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
-            if (e.RowIndex>-1 && dtgvNV.Rows[e.RowIndex].Cells[1].Value.ToString() !="")
+            if (e.RowIndex>-1)
             {
                 DataGridViewRow row = this.dtgvNV.Rows[e.RowIndex];
-                txtDiaChi.Enabled = true;
-                txtTenNhanVien.Enabled = true;
-                rdoHoatDong.Enabled = true;
-                rdoNam.Enabled = true;
-                rdoNgungHoatDong.Enabled = true;
-                rdoNhanVien.Enabled = true;
-                rdoNu.Enabled = true;
-                rdoQuanTri.Enabled = true;
-                btnXoa.Enabled = true;
-                btnSua.Enabled = true;
-                btnLuu.Enabled = false;
-                txtEmail.Text = row.Cells[2].Value.ToString();
-                txtTenNhanVien.Text = row.Cells[1].Value.ToString();
-                txtDiaChi.Text = row.Cells[3].Value.ToString();             
-                if (row.Cells[6].Value.ToString() == "Nam")
+                if (row.Cells[1].Value.ToString().Count() == 0)
                 {
-                    rdoNam.Checked = true;
-                }
-                else { rdoNu.Checked = true; }
-                if (bool.Parse(row.Cells[4].Value.ToString()) == true)
-                {
-                    rdoQuanTri.Checked = true;
+                    MessageBox.Show("Không tồn tại dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    resetValue();
                 }
                 else
                 {
-                    rdoNhanVien.Checked = true;
-                }
+                    txtDiaChi.Enabled = true;
+                    txtTenNhanVien.Enabled = true;
+                    rdoHoatDong.Enabled = true;
+                    rdoNam.Enabled = true;
+                    rdoNgungHoatDong.Enabled = true;
+                    rdoNhanVien.Enabled = true;
+                    rdoNu.Enabled = true;
+                    rdoQuanTri.Enabled = true;
+                    btnXoa.Enabled = true;
+                    btnSua.Enabled = true;
+                    btnLuu.Enabled = false;
+                    txtEmail.Text = row.Cells[2].Value.ToString();
+                    txtTenNhanVien.Text = row.Cells[1].Value.ToString();
+                    txtDiaChi.Text = row.Cells[3].Value.ToString();
+                    if (row.Cells[6].Value.ToString() == "Nam")
+                    {
+                        rdoNam.Checked = true;
+                    }
+                    else { rdoNu.Checked = true; }
+                    if (bool.Parse(row.Cells[4].Value.ToString()) == true)
+                    {
+                        rdoQuanTri.Checked = true;
+                    }
+                    else
+                    {
+                        rdoNhanVien.Checked = true;
+                    }
 
-                if (bool.Parse(row.Cells[5].Value.ToString()) == true)
-                {
-                    rdoHoatDong.Checked = true;
+                    if (bool.Parse(row.Cells[5].Value.ToString()) == true)
+                    {
+                        rdoHoatDong.Checked = true;
+                    }
+                    else
+                    {
+                        rdoNgungHoatDong.Checked = true;
+                    }
                 }
-                else
-                {
-                    rdoNgungHoatDong.Checked = true;
-                }
-            }
-            else
-            {
-                MessageBox.Show("Không tồn tại dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

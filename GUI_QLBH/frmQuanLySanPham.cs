@@ -284,33 +284,37 @@ namespace GUI_QLBH
         private void dtgvSP_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             string saveDirectory = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
-            if(e.RowIndex > -1 )
+            if (e.RowIndex > -1)
             {
                 DataGridViewRow row = this.dtgvSP.Rows[e.RowIndex];
-                btnXoa.Enabled = true;
-                btnSua.Enabled = true;
-                btnLuu.Enabled = false;
-                btnMoHinh.Enabled = true;
-                txtDonGiaBan.Enabled = true;
-                txtDonGiaNhap.Enabled = true;
-                txtGhiChu.Enabled = true;
-                txtHinh.Enabled = true;
-                txtSoLuong.Enabled = true;
-                txtTenHang.Enabled = true;
-                txtMaHang.Text = row.Cells[0].Value.ToString();
-                txtTenHang.Text= row.Cells[1].Value.ToString();
-                txtDonGiaBan.Text= row.Cells[4].Value.ToString(); 
-                txtDonGiaNhap.Text= row.Cells[3].Value.ToString();
-                txtHinh.Text= row.Cells[5].Value.ToString();
-                txtGhiChu.Text= row.Cells[6].Value.ToString();
-                txtSoLuong.Text = row.Cells[2].Value.ToString();
-                checkUrlImage = txtHinh.Text;
-                pictureBoxSP.Image = Image.FromFile(saveDirectory + row.Cells[5].Value.ToString());
-            } 
-            else
-            {
-                MessageBox.Show("không tồn tại dữ liệu");
-            }    
+                if (row.Cells[1].Value.ToString().Count()==0)
+                {
+                    MessageBox.Show("không tồn tại dữ liệu");
+                    ReSetValue();
+                } 
+                else
+                {
+                    btnXoa.Enabled = true;
+                    btnSua.Enabled = true;
+                    btnLuu.Enabled = false;
+                    btnMoHinh.Enabled = true;
+                    txtDonGiaBan.Enabled = true;
+                    txtDonGiaNhap.Enabled = true;
+                    txtGhiChu.Enabled = true;
+                    txtHinh.Enabled = true;
+                    txtSoLuong.Enabled = true;
+                    txtTenHang.Enabled = true;
+                    txtMaHang.Text = row.Cells[0].Value.ToString();
+                    txtTenHang.Text = row.Cells[1].Value.ToString();
+                    txtDonGiaBan.Text = row.Cells[4].Value.ToString();
+                    txtDonGiaNhap.Text = row.Cells[3].Value.ToString();
+                    txtHinh.Text = row.Cells[5].Value.ToString();
+                    txtGhiChu.Text = row.Cells[6].Value.ToString();
+                    txtSoLuong.Text = row.Cells[2].Value.ToString();
+                    checkUrlImage = txtHinh.Text;
+                    pictureBoxSP.Image = Image.FromFile(saveDirectory + row.Cells[5].Value.ToString());
+                }      
+            }     
         }
     }
 }

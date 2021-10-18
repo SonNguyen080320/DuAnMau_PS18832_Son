@@ -220,6 +220,12 @@ namespace GUI_QLBH
         {
             if (e.RowIndex > -1)
             {
+                DataGridViewRow rows = this.dtgvKH.Rows[e.RowIndex];
+                if(rows.Cells[1].Value.ToString().Count()==0)
+                {
+                    MessageBox.Show("Không tồn tại dữ liệu");
+                    resetValue();
+                }    
                 rdoNu.Enabled = true;
                 rdoNam.Enabled = true;
                 txtSdt.Enabled = false;
@@ -228,7 +234,6 @@ namespace GUI_QLBH
                 btnSua.Enabled = true;
                 btnXoa.Enabled = true;
                 btnLuu.Enabled = false;
-                DataGridViewRow rows = this.dtgvKH.Rows[e.RowIndex];
                 txtDiaChi.Text = rows.Cells[2].Value.ToString();
                 txtHoTen.Text = rows.Cells[1].Value.ToString();
                 txtSdt.Text = rows.Cells[0].Value.ToString();
